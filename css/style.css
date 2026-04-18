@@ -1,3 +1,13 @@
+/* --------------------------------------- */
+/* FONT SIZE */
+
+/* 10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98 */
+
+/* SPACING SYSTEM */
+
+/* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+/* --------------------------------------- */
+
 * {
   margin: 0;
   padding: 0;
@@ -10,6 +20,90 @@ html {
 
 body {
   font-family: "TikTok Sans", sans-serif;
+  color: #fff;
   font-weight: 400;
   line-height: 1;
+}
+
+.container {
+  min-height: 100vh;
+  max-width: 51.2rem;
+  margin: 0 auto;
+  position: relative;
+}
+
+.video {
+  display: block;
+  width: 100%;
+}
+
+/* HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 2rem 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header i:first-child {
+  font-size: 2rem;
+}
+
+.header i:last-child {
+  font-size: 2rem;
+}
+
+.main__nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.main__nav .main__nav-link {
+  font-size: 1.6rem;
+  color: #fff;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.main__nav .main__nav-link:nth-child(1),
+.main__nav .main__nav-link:nth-child(2) {
+  color: #777;
+}
+
+.main__nav .main__nav-link:nth-child(2) {
+  position: relative;
+}
+
+.main__nav .main__nav-link:nth-child(2)::before {
+  display: block;
+  content: "";
+  width: 8px;
+  height: 8px;
+  background-color: red;
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  opacity: 0.5;
+  border-radius: 100px;
+}
+
+.main__nav .main__nav-link:nth-child(3) {
+  position: relative;
+}
+
+.main__nav .main__nav-link:nth-child(3)::before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 3px;
+  background-color: #fff;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
 }

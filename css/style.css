@@ -6,6 +6,7 @@
 /* SPACING SYSTEM */
 
 /* 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128 */
+
 /* --------------------------------------- */
 
 * {
@@ -26,7 +27,7 @@ body {
 }
 
 .container {
-  min-height: 100vh;
+  height: 100vh;
   max-width: 51.2rem;
   margin: 0 auto;
   position: relative;
@@ -63,7 +64,8 @@ body {
   gap: 2rem;
 }
 
-.main__nav .main__nav-link {
+.main__nav .main__nav-link:link,
+.main__nav .main__nav-link:visited {
   font-size: 1.6rem;
   color: #fff;
   font-weight: 500;
@@ -79,7 +81,7 @@ body {
   position: relative;
 }
 
-.main__nav .main__nav-link:nth-child(2)::before {
+.main__nav .main__nav-link:nth-child(2)::after {
   display: block;
   content: "";
   width: 8px;
@@ -96,14 +98,102 @@ body {
   position: relative;
 }
 
-.main__nav .main__nav-link:nth-child(3)::before {
+.main__nav .main__nav-link:nth-child(3)::after {
   display: block;
   content: "";
   width: 20px;
   height: 3px;
+  cursor: default;
   background-color: #fff;
   position: absolute;
   bottom: -10px;
   left: 50%;
   transform: translateX(-50%);
+}
+
+/* SIDEBAR */
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.2rem;
+  position: absolute;
+  bottom: 0;
+  right: 2.4rem;
+}
+
+.sidebar__logo img {
+  width: 100%;
+  border-radius: 100px;
+}
+
+.sidebar__logo {
+  width: 4.8rem;
+  height: 4.8rem;
+  border-radius: 100px;
+  border: 2px solid #fff;
+  position: relative;
+}
+
+.sidebar__logo::after {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: "+";
+  height: 1.6rem;
+  width: 1.6rem;
+  background-color: red;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  border-radius: 100px;
+}
+
+.sidebar > div:not(.sidebar__logo) {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.sidebar div i {
+  font-size: 2.4rem;
+}
+
+.sidebar div span {
+  font-size: 1.2rem;
+}
+
+/* DESCRIPTION */
+
+.description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  position: absolute;
+  bottom: -10%;
+  left: 1.6rem;
+}
+
+.description h4 {
+  font-size: 1.6rem;
+}
+
+.description p {
+  font-size: 1.4rem;
+  line-height: 1.4;
+}
+
+.description span {
+  font-weight: 600;
+}
+
+/* FOOTER */
+
+.footer {
+  height: 5rem;
+  width: 100%;
+  background-color: #000;
 }

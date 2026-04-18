@@ -27,7 +27,7 @@ body {
 }
 
 .container {
-  height: 100vh;
+  min-height: 100vh;
   max-width: 51.2rem;
   margin: 0 auto;
   position: relative;
@@ -36,6 +36,7 @@ body {
 .video {
   display: block;
   width: 100%;
+  height: 100%;
 }
 
 /* HEADER */
@@ -119,7 +120,7 @@ body {
   align-items: center;
   gap: 3.2rem;
   position: absolute;
-  bottom: 0;
+  top: 40%;
   right: 2.4rem;
 }
 
@@ -166,34 +167,92 @@ body {
   font-size: 1.2rem;
 }
 
-/* DESCRIPTION */
+/* FOOTER */
 
-.description {
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.footer__description {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  position: absolute;
-  bottom: -10%;
-  left: 1.6rem;
+  padding-left: 1.6rem;
+  position: relative;
+  top: -2rem;
 }
 
-.description h4 {
+.footer__description h4 {
   font-size: 1.6rem;
 }
 
-.description p {
+.footer__description p {
   font-size: 1.4rem;
   line-height: 1.4;
 }
 
-.description span {
+.footer__description span {
   font-weight: 600;
 }
 
-/* FOOTER */
-
-.footer {
-  height: 5rem;
+.footer__nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
   width: 100%;
+  padding: 1.2rem;
   background-color: #000;
+}
+
+.footer__nav-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.footer__nav-box i {
+  font-size: 2rem;
+  color: #777;
+  position: relative;
+}
+
+.footer__nav-box:nth-child(4) i::after {
+  display: block;
+  content: "19";
+  padding: 0.2rem 0.6rem;
+  font-size: 0.8rem;
+  border-radius: 4px;
+  background-color: red;
+  color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.footer__nav-box span {
+  font-size: 1.2rem;
+  color: #777;
+  font-weight: 500;
+}
+
+.footer__nav-box .white-btn,
+.footer__nav-box .white-btn + span {
+  color: #fff;
+  font-weight: 600;
+}
+
+.plus-btn {
+  background-color: #fff;
+  padding: 0.6rem 1.2rem;
+  color: #000;
+  font-weight: 600;
+  font-size: 1.6rem;
+  position: relative;
+  border-radius: 9px;
+  border-left: 4px solid #20d5ec;
+  border-right: 5px solid #fe2c55;
 }

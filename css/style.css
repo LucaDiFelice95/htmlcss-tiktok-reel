@@ -180,6 +180,7 @@ body {
 .footer__description {
   display: flex;
   flex-direction: column;
+  flex: 1 0 0;
   gap: 1.6rem;
   padding-left: 1.6rem;
   position: relative;
